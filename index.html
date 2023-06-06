@@ -6,36 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="ejercicio.css">
 </head>
 
 <body>
+    <h1>Supermercado los Devs</h1>
 
     <div>
         <p>Cantidad de productos a mostrar</p>
-        <select name="Cantidad" id="Cant-a-mostrar">
+        <select name="Cantidad-a-mostrar" id="Cant-a-mostrar">
             <option value="1">1</option>
             <option value="3">3</option>
             <option value="7">7</option>
             <option value="10">10</option>
         </select>
+    </div>
 
+    <div>
         <p>Cantidad permitida por cada producto</p>
-        <select name="" id="cant-productos">
+        <select name="cant-productos" id="cant-perm-producto">
             <option value="1">1</option>
             <option value="15">15</option>
             <option value="25">25</option>
             <option value="50">50</option>
         </select>
+    </div>
+    <div>
         <p>Colores</p>
-        <select name="" id="opciones-colores">
+        <select name="opciones-colores" id="opciones-colores">
             <option value="0">-</option>
             <option value="1">lila-violeta</option>
             <option value="2">rojo-azul</option>
             <option value="3">rosa-naranja</option>
             <option value="4">verde-beige</option>
         </select>
-        <button>generar</button>
     </div>
+    <button onclick="generar()">Generar</button>
+
+    <div id="contenedor-resultado-selecc">
+
+        <p>La cantidad de productos a mostrar es:</p>
+        <p>La cantidad de productos permitidos por compra son:</p>
+        <p>Los colores seleccionados son:</p>
+
+    </div>
+
+    <!-- <div id="contenedor-producto">
+        <p>Producto 1</p>
+        <img id="imagen-produc"
+            src="https://i5.walmartimages.com/asr/5632ea62-2863-48e5-863b-c1959d44d4d4_3.1adab353621df98f9e65970c94e2ede9.jpeg"
+            alt="coca cola">
+        <p>Seleccione metodo de pago:</p>
+        <select name="seleccione-metodo-pago" id="selec-metodo-pago">
+            <option value="efectivo"> efectivo</option>
+            <option value="debito">débito</option>
+            <option value="credito">crédito</option>
+        </select>
+        <p>Seleccione cantidades</p>
+        <select name="selec.cant" id="selec-cant">
+            <option value="1">1</option>
+        </select>
+        <button>Comprar</button>
+    </div>
+ -->
+    <main id="productos-caja">
+
+    </main>
+
+
     <script src="scrip.js"></script>
 </body>
 
