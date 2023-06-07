@@ -11,64 +11,46 @@
 
 <body>
     <h1>Supermercado los Devs</h1>
+    <section>
+        <div class="opcion">
+            <p>Cantidad de productos a mostrar</p>
+            <select name="productos" id="productos">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="10">10</option>
+            </select>
+        </div>
 
-    <div>
-        <p>Cantidad de productos a mostrar</p>
-        <select name="Cantidad-a-mostrar" id="Cant-a-mostrar">
-            <option value="1">1</option>
-            <option value="3">3</option>
-            <option value="7">7</option>
-            <option value="10">10</option>
-        </select>
-    </div>
+        <div>
+            <p>Cantidad permitida por cada producto</p>
+            <select name="cantidad" id="cantidad">
+                <option value="1">1</option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div>
+            <p>Colores</p>
+            <select name="colores" id="colores">
+                <option value="0">-</option>
+                <option value="1">lila-violeta</option>
+                <option value="2">rojo-azul</option>
+                <option value="3">rosa-naranja</option>
+                <option value="4">verde-beige</option>
+            </select>
+        </div>
+        <button onclick="generar()">Generar</button>
+    </section>
+    <section id="opciones-seleccionadas">
 
-    <div>
-        <p>Cantidad permitida por cada producto</p>
-        <select name="cant-productos" id="cant-perm-producto">
-            <option value="1">1</option>
-            <option value="15">15</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-        </select>
-    </div>
-    <div>
-        <p>Colores</p>
-        <select name="opciones-colores" id="opciones-colores">
-            <option value="0">-</option>
-            <option value="1">lila-violeta</option>
-            <option value="2">rojo-azul</option>
-            <option value="3">rosa-naranja</option>
-            <option value="4">verde-beige</option>
-        </select>
-    </div>
-    <button onclick="generar()">Generar</button>
+        <p id="CantidadProductosText"></p>
+        <p id="cantidadPorProductoText"></p>
+        <p id="coloresSeleccionadosText"></p>
 
-    <div id="contenedor-resultado-selecc">
+    </section>
 
-        <p>La cantidad de productos a mostrar es:</p>
-        <p>La cantidad de productos permitidos por compra son:</p>
-        <p>Los colores seleccionados son:</p>
-
-    </div>
-
-    <!-- <div id="contenedor-producto">
-        <p>Producto 1</p>
-        <img id="imagen-produc"
-            src="https://i5.walmartimages.com/asr/5632ea62-2863-48e5-863b-c1959d44d4d4_3.1adab353621df98f9e65970c94e2ede9.jpeg"
-            alt="coca cola">
-        <p>Seleccione metodo de pago:</p>
-        <select name="seleccione-metodo-pago" id="selec-metodo-pago">
-            <option value="efectivo"> efectivo</option>
-            <option value="debito">débito</option>
-            <option value="credito">crédito</option>
-        </select>
-        <p>Seleccione cantidades</p>
-        <select name="selec.cant" id="selec-cant">
-            <option value="1">1</option>
-        </select>
-        <button>Comprar</button>
-    </div>
- -->
     <main id="productos-caja">
 
     </main>
