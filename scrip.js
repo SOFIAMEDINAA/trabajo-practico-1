@@ -146,7 +146,7 @@ function generar() {
                 producto[i].style.backgroundColor = "green";
             }
             else if (iParOImpar != 0) {
-                producto[i].style.backgroundColor = "light orange";
+                producto[i].style.backgroundColor = "beige";
             }
         }
     }
@@ -170,7 +170,7 @@ function generarOpcionesCantidad(cantidad) {
 function elegirImagen() {
     let imagen = "";
     let numeroAleatorio = Math.floor(Math.random() * 10);
-    if (numeroAleatorio == 0) {
+    if (numeroAleatorio == 0) {s
         imagen = `<img src="./images/imagen1.png" alt="imagen 1">`;
     }
     else if (numeroAleatorio == 1) {

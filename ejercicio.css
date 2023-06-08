@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(177, 211, 177);
+    display: grid;
+}
+
+h1 {
+    text-align: center;
+}
+
+#opciones-seleccionadas {
+    text-align: center;
+    margin-left: 25%;
+    width: 50vw;
+    background-color: rgb(122, 143, 122);
+    padding: 5px;
+}
+
+#opciones {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#opcion {
+    display: grid;
+}
+
+#productos-caja{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(145, 180, 168); 
+   
+
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    width: 10vw;
+    
+}
+
+img{
+    align-self: center;
+    width: 80px;
+}
+button {
+    margin: 20px;
+    padding: 5px 10px;
+}
+select {
+    
+    text-align: center;
+}
