@@ -2,20 +2,20 @@ window.onload = () => {
     generar()
 }
 
-const selecProductos = document.querySelector("#productos").value;
-    const selecCantidad = document.querySelector("#cantidad").value;
-    const selecColores = document.querySelector("#colores").value;
-    const cajaProductos = document.getElementById('productos-caja');
-    const producto = document.getElementsByClassName('producto');
-    const coloresText = document.querySelector("#coloresSeleccionadosText");
-    const cantidadPorProductoText = document.querySelector("#cantidadPorProductoText");
-    const cantidadProductosText = document.querySelector("#cantidadProductosText");
 
 
 
 function generar() {
 
-    
+    const selecProductos = document.querySelector("#productos").value;
+    const selecCantidad = document.querySelector("#cantidad").value;
+    const selecColores = document.querySelector("#colores").value;
+    const cajaProductos = document.getElementById('productos-caja');
+    const producto = document.getElementsByClassName('producto');
+    const cantidadProductosText = document.querySelector("#cantidadProductosText");
+    const cantidadPorProductoText = document.querySelector("#cantidadPorProductoText");
+    const coloresText = document.querySelector("#coloresSeleccionadosText");
+
     cajaProductos.innerHTML = "";
 
     for (let i = 0; i < selecProductos; i++) {
@@ -26,9 +26,9 @@ function generar() {
             ${elegirImagen()}
             <p>Seleccione metodo de pago:</p>
             <select name="seleccione-metodo-pago" id="selec-metodo-pago">
-                <option value="efectivo"> efectivo</option>
-                <option value="debito">débito</option>
-                <option value="credito">crédito</option>
+            <option value="efectivo"> efectivo</option>
+            <option value="debito">débito</option>
+            <option value="credito">crédito</option>
             </select>
             <p>Seleccione cantidades</p>
             <select name="selec.cant" class="selec-cant">
@@ -39,61 +39,61 @@ function generar() {
 
         }
 
-        else if (selecProdPermitidos == 15) {
+        else if (selecCantidad == 15) {
             estructuraDeUnProducto = `
-        <div class="producto">
+            <div class="producto">
             <p>Producto ${i + 1}</p>
             ${elegirImagen()}
             <p>Seleccione metodo de pago:</p>
             <select name="seleccione-metodo-pago" id="selec-metodo-pago">
-                <option value="efectivo"> efectivo</option>
-                <option value="debito">débito</option>
-                <option value="credito">crédito</option>
+            <option value="efectivo"> efectivo</option>
+            <option value="debito">débito</option>
+            <option value="credito">crédito</option>
             </select>
             <p>Seleccione cantidades</p>
             <select name="selec.cant" class="selec-cant">
-                ${generarOpcionesDeCantidad(15)}
+                ${generarOpcionesCantidad(15)}
             </select>
             <button>Comprar</button>
-        </div>`
+            </div>`
         }
 
-        else if (selecProdPermitidos == 25) {
+        else if (selecCantidad == 25) {
             estructuraDeUnProducto = `
-        <div class="producto">
+            <div class="producto">
             <p>Producto ${i + 1}</p>
             ${elegirImagen()}
             <p>Seleccione metodo de pago:</p>
             <select name="seleccione-metodo-pago" id="selec-metodo-pago">
-                <option value="efectivo"> efectivo</option>
-                <option value="debito">débito</option>
-                <option value="credito">crédito</option>
+            <option value="efectivo"> efectivo</option>
+            <option value="debito">débito</option>
+            <option value="credito">crédito</option>
             </select>
             <p>Seleccione cantidades</p>
             <select name="selec.cant" class="selec-cant">
-                ${generarOpcionesDeCantidad(25)}
+                ${generarOpcionesCantidad(25)}
             </select>
             <button>Comprar</button>
-        </div>`
+            </div>`
         }
 
-        else if (selecProdPermitidos == 50) {
+        else if (selecCantidad == 50) {
             estructuraDeUnProducto = `
-        <div class="producto">
+            <div class="producto">
             <p>Producto ${i + 1}</p>
             ${elegirImagen()}
             <p>Seleccione metodo de pago:</p>
             <select name="seleccione-metodo-pago" id="selec-metodo-pago">
-                <option value="efectivo"> efectivo</option>
-                <option value="debito">débito</option>
-                <option value="credito">crédito</option>
+            <option value="efectivo"> efectivo</option>
+            <option value="debito">débito</option>
+            <option value="credito">crédito</option>
             </select>
             <p>Seleccione cantidades</p>
             <select name="selec.cant" class="selec-cant">
-                ${generarOpcionesDeCantidad(50)}
+                ${generarOpcionesCantidad(50)}
             </select>
             <button>Comprar</button>
-        </div>`
+            </div>`
         }
 
 
@@ -101,16 +101,63 @@ function generar() {
 
     }
 
-    cantidadPorProductoText.innerText = `Cantidad permitida por cada producto: ${selecCantidad}`;
-    cantidadProductosText.innerText = `La cantidad de productos a mostrar es: ${selecProductos}`;
-    coloresText.innerText = `Los colores seleccionado a usar son: ${selecColores}`;
+    if (selecColores == "0") {
+        for (let i = 0; i < producto.length; i++) {
+            producto[i].style.backgroundColor = "grey"
+        }
+    }
+    else if (selecColores == "purpura-violeta") {
+        for (let i = 0; i < producto.length; i++) {
+            let iParOImpar = i % 2;
+            if (iParOImpar == 0) {
+                producto[i].style.backgroundColor = "purple";
+            }
+            else if (iParOImpar != 0) {
+                producto[i].style.backgroundColor = "violet";
+            }
+        }
+    }
+    else if (selecColores == "rojo-azul") {
+        for (let i = 0; i < producto.length; i++) {
+            let iParOImpar = i % 2;
+            if (iParOImpar == 0) {
+                producto[i].style.backgroundColor = "red";
+            }
+            else if (iParOImpar != 0) {
+                producto[i].style.backgroundColor = "blue";
+            }
+        }
+    }
+    else if (selecColores == "rosa-naranja") {
+        for (let i = 0; i < producto.length; i++) {
+            let iParOImpar = i % 2;
+            if (iParOImpar == 0) {
+                producto[i].style.backgroundColor = "pink";
+            }
+            else if (iParOImpar != 0) {
+                producto[i].style.backgroundColor = "orange";
+            }
+        }
+    }
+    else if (selecColores == "verde-beige") {
+        for (let i = 0; i < producto.length; i++) {
+            let iParOImpar = i % 2;
+            if (iParOImpar == 0) {
+                producto[i].style.backgroundColor = "green";
+            }
+            else if (iParOImpar != 0) {
+                producto[i].style.backgroundColor = "light orange";
+            }
+        }
+    }
 
 
-
-
+    cantidadProductosText.innerHTML = `La cantidad de productos a mostrar es: ${selecProductos}`;
+    cantidadPorProductoText.innerHTML = `Cantidad permitida por cada producto: ${selecCantidad}`;
+    coloresText.innerHTML = `Los colores seleccionado a usar son: ${selecColores}`;
 }
 
-function generarOpcionesDeCantidad(cantidad) {
+function generarOpcionesCantidad(cantidad) {
     let opciones = "";
     let contador = 0;
     while (contador < cantidad) {

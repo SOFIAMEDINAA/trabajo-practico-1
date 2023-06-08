@@ -11,7 +11,7 @@
 
 <body>
     <h1>Supermercado los Devs</h1>
-    <section>
+    <section id="opciones">
         <div class="opcion">
             <p>Cantidad de productos a mostrar</p>
             <select name="productos" id="productos">
@@ -22,7 +22,7 @@
             </select>
         </div>
 
-        <div>
+        <div class = "opcion">
             <p>Cantidad permitida por cada producto</p>
             <select name="cantidad" id="cantidad">
                 <option value="1">1</option>
@@ -31,21 +31,21 @@
                 <option value="50">50</option>
             </select>
         </div>
-        <div>
+        <div class="opcion">
             <p>Colores</p>
             <select name="colores" id="colores">
                 <option value="0">-</option>
-                <option value="1">lila-violeta</option>
-                <option value="2">rojo-azul</option>
-                <option value="3">rosa-naranja</option>
-                <option value="4">verde-beige</option>
+                <option value="purpura-violeta">lila-violeta</option>
+                <option value="rojo-azul">rojo-azul</option>
+                <option value="rosa-naranja">rosa-naranja</option>
+                <option value="verde-beige">verde-beige</option>
             </select>
         </div>
         <button onclick="generar()">Generar</button>
     </section>
     <section id="opciones-seleccionadas">
 
-        <p id="CantidadProductosText"></p>
+        <p id="cantidadProductosText"></p>
         <p id="cantidadPorProductoText"></p>
         <p id="coloresSeleccionadosText"></p>
 
